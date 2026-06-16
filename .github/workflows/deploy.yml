@@ -31,11 +31,11 @@ jobs:
           cache-dependency-path: "aBBi LV/package-lock.json"
 
       - name: Install dependencies
-        working-directory: "aBBi LV"
+        working-directory: "aBBi LV/abbi-ng-ai-image-descriptor"
         run: npm ci
 
       - name: Build Angular app
-        working-directory: "aBBi LV"
+        working-directory: "aBBi LV/abbi-ng-ai-image-descriptor"
         run: npm run build -- --base-href=/aBBi/
 
       - name: Find and prepare built site
