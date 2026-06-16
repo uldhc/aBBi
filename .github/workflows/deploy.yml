@@ -41,7 +41,7 @@ jobs:
       - name: Find and prepare built site
         run: |
           echo "Looking for built index.html..."
-          INDEX_FILE=$(find "aBBi LV/dist" -name index.html | head -n 1)
+          INDEX_FILE=$(find "aBBi LV/abbi-ng-ai-image-descriptor/dist" -name index.html | head -n 1)
           echo "Found index.html at: $INDEX_FILE"
 
           if [ -z "$INDEX_FILE" ]; then
