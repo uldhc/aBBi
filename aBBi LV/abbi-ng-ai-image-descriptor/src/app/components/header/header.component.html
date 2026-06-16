@@ -12,17 +12,19 @@
       >
       
     </a>
-
+  
     <nav class="header-actions" aria-label="Galvenes darbības">
       <a class="header-action" href="#" aria-label="Palīdzība">
         <mat-icon>info</mat-icon>
         <span>Info</span>
       </a>
-
-      <a class="language-button" href="https://uldhc.github.io/aBBi-en/" aria-label="Mainīt valodu">
-        <mat-icon>language</mat-icon>
-        <span>LV</span>
-      </a>
+      
+      @if (showLanguageButton) {
+        <a class="language-button" href="https://uldhc.github.io/aBBi-en/" aria-label="Mainīt valodu">
+          <mat-icon>language</mat-icon>
+          <span>LV</span>
+        </a>
+      }
     </nav>
   </div>
 </header>
