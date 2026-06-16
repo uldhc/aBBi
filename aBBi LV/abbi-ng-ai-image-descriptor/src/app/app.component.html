@@ -1,7 +1,7 @@
 @let taskNoun = settings.taskNouns();
 
 <div class="content-wrapper">
-  <app-header></app-header>
+  <app-header [showLanguageButton]="currentStepIndex() === 0"></app-header>
 
   <header class="app-title">
   <div class="app-title-main">
@@ -52,7 +52,7 @@
       </div>
     </section>
 
-    <mat-stepper [orientation]="(stepperOrientation | async)!" [linear]="true" #stepper>
+    <mat-stepper [orientation]="(stepperOrientation | async)!" [linear]="true" #stepper (selectionChange)="currentStepIndex.set($event.selectedIndex)">
       <!-- Step 1: Configure settings -->
       <mat-step label="Iestatījumi">
         <h2>Iestatījumi</h2>
