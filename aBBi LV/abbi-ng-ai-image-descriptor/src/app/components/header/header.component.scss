@@ -30,6 +30,7 @@
   display: flex;
   gap: 1rem;
   text-decoration: none;
+  flex-shrink: 0;
 }
 
 .brand-logo {
