@@ -36,6 +36,10 @@ import altTextNorwegianPrompt from '../prompts/altTextMainNorwegian.txt?raw';
 import altTextFilenameNorwegianPrompt from '../prompts/altTextFilenameNorwegian.txt?raw';
 import altTextTranslateNorwegianPrompt from '../prompts/altTextTranslateNorwegian.txt?raw';
 
+import altTextGermanPrompt from '../prompts/altTextMainGerman.txt?raw';
+import altTextFilenameGermanPrompt from '../prompts/altTextFilenameGerman.txt?raw';
+import altTextTranslateGermanPrompt from '../prompts/altTextTranslateGerman.txt?raw';
+
 import transcriptionIncludeHeadersPrompt from '../prompts/transcriptionIncludeHeaders.txt?raw';
 import transcriptionIgnoreHeadersPrompt from '../prompts/transcriptionIgnoreHeaders.txt?raw';
 import transcriptionTeiPrompt from '../prompts/transcriptionTei.txt?raw';
@@ -49,7 +53,7 @@ console.log(
 */
 
 export type TaskTypeId = 'altText' | 'transcription' | 'transcriptionBatchTei';
-export type LanguageCode = 'lv' | 'dk' | 'ee' | 'en' | 'fi' | 'is' | 'lt' | 'no' | 'sv' ;
+export type LanguageCode = 'lv' | 'en' | 'dk' | 'ee' | 'is' | 'lt' | 'no' | 'fi' | 'de' | 'sv' ;
 
 export const TASK_CONFIGS: TaskTypeConfig[] = [
   {
@@ -111,7 +115,7 @@ export const TASK_CONFIGS: TaskTypeConfig[] = [
         id: 'no',
         label: 'Norvēģu',
         languageCode: 'no',
-        prompt: altTextFinnishPrompt
+        prompt: altTextNorwegianPrompt
       },
       {
         id: 'sv',
@@ -131,7 +135,8 @@ export const TASK_CONFIGS: TaskTypeConfig[] = [
         dk: altTextFilenameDanishPrompt,
         ee: altTextFilenameEstonianPrompt,
         is: altTextFilenameIcelandicPrompt,
-        no: altTextFilenameNorwegianPrompt
+        no: altTextFilenameNorwegianPrompt,
+        de: altTextFilenameGermanPrompt
       },
       translatePrompt: {
         sv: altTextTranslateSwedishPrompt,
@@ -142,7 +147,8 @@ export const TASK_CONFIGS: TaskTypeConfig[] = [
         ee: altTextTranslateEstonianPrompt,
         dk: altTextTranslateDanishPrompt,
         no: altTextTranslateNorwegianPrompt,
-        is: altTextTranslateIcelandicPrompt
+        is: altTextTranslateIcelandicPrompt,
+        de: altTextTranslateGermanPrompt
       },
     },
   },
