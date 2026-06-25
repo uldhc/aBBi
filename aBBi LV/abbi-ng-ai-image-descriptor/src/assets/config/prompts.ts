@@ -76,6 +76,12 @@ export const TASK_CONFIGS: TaskTypeConfig[] = [
         prompt: altTextLatvianPrompt
       },
       {
+        id: 'en',
+        label: 'Angļu',
+        languageCode: 'en',
+        prompt: altTextEnglishPrompt
+      },
+      {
         id: 'dk',
         label: 'Dāņu',
         languageCode: 'dk',
@@ -86,12 +92,6 @@ export const TASK_CONFIGS: TaskTypeConfig[] = [
         label: 'Igauņu',
         languageCode: 'ee',
         prompt: altTextEstonianPrompt
-      },
-      {
-        id: 'en',
-        label: 'Angļu',
-        languageCode: 'en',
-        prompt: altTextEnglishPrompt
       },
       {
         id: 'fi',
@@ -116,6 +116,12 @@ export const TASK_CONFIGS: TaskTypeConfig[] = [
         label: 'Norvēģu',
         languageCode: 'no',
         prompt: altTextNorwegianPrompt
+      },
+      {
+        id: 'de',
+        label: 'Vācu',
+        languageCode: 'de',
+        prompt: altTextGermanPrompt
       },
       {
         id: 'sv',
