@@ -13,13 +13,21 @@ export class HeaderComponent {
   @Input() showLanguageButton = true;
 
   showInfoOverlay = signal(false);
+  openInfoSection = signal<string | null>('about');
 
   openInfoOverlay(event: Event) {
     event.preventDefault();
     this.showInfoOverlay.set(true);
+    document.body.style.overflow = 'hidden';
   }
 
   closeInfoOverlay() {
     this.showInfoOverlay.set(false);
+    document.body.style.overflow = '';
   }
-}
+
+  toggleInfoSection(section: string) {
+    this.openInfoSection.update(current =>
+      current === section ? null : section
+    );
+  }}
